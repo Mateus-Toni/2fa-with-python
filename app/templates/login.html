@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='./login.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h3><a href=" {{url_for('.index')}} ">HOME</a></h3>
+        <h3><a href=" {{url_for('.cadastro')}} ">CADASTRO</a></h3>
+        <h3><a href=" {{url_for('.login')}} ">LOGIN</a></h3>
+    </nav>
+
+    <div class="caixa_login">
+         <h1>LOGIN</h1>
+         <form action="/autenticar" method="post">
+            <input type="email" placeholder="email" id="email" class="email" name="email">
+            <input type="password" placeholder="senha" name="senha" id="senha">
+            <input type="submit" value="enviar" class="botao">
+         </form>
+    </div>
+</body>
+</html>

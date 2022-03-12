@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='./codigo.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h3><a href=" {{url_for('.login')}} ">VOLTAR</a></h3>
+    </nav>
+
+    <div class="caixa_login">
+        <h1>Código</h1>
+        <form action="/verifica_codigo" method="post">
+           <input type="text" placeholder="código" class="cod_user" name="cod_user">
+           <input type="hidden" name="cod_back" id="cod_back" value="{{ cod_back }}">
+           <input type="submit" value="enviar" class="botao">
+        </form>
+   </div>
+</body>
+</html>
